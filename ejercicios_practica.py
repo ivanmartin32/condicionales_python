@@ -64,17 +64,6 @@ def ej1():
     else:
         print('no cumple la condicion')
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 def ej2():
     # Ejemplos variables de texto
 
@@ -87,6 +76,12 @@ def ej2():
 
     # Compare cual de las dos palabras es mayor (alfabéticamente)
     # Imprima en pantalla según corresponda
+    palabras_1 =len(texto_1)
+    palabras_2 =len(texto_2)
+    if palabras_1 > palabras_2:
+        print('{} tiene mas letras que {}'.format(texto_1,texto_2))
+    elif palabras_1 < palabras_2:
+        print('{} tiene mas letras que {}'.format(texto_2,texto_1))
 
     # Compare cual de las dos palabras tiene mayor
     # cantidad de letras
@@ -136,7 +131,7 @@ def ej3():
     # Utilizar "if" anidados
 
 
-def ej4():
+#def ej4():
     # Ejemplos variables de texto
 
     texto_1 = '5'
@@ -162,6 +157,6 @@ def ej4():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
-    #ej2()
+    ej2()
     #ej3()
     #ej4()
