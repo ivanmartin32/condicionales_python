@@ -76,6 +76,15 @@ def ej2():
 
     # Compare cual de las dos palabras es mayor (alfabéticamente)
     # Imprima en pantalla según corresponda
+    if texto_1 > texto_2:
+        print('{} es mayor'.format(texto_1))
+    elif texto_2 > texto_1:
+        print('{} es mayor'.format(texto_2))   
+
+    # Compare cual de las dos palabras tiene mayor
+    # cantidad de letras
+    # Imprima en pantalla según corresponda
+
     palabras_1 =len(texto_1)
     palabras_2 =len(texto_2)
     if palabras_1 > palabras_2:
@@ -83,22 +92,31 @@ def ej2():
     elif palabras_1 < palabras_2:
         print('{} tiene mas letras que {}'.format(texto_2,texto_1))
 
-    # Compare cual de las dos palabras tiene mayor
-    # cantidad de letras
-    # Imprima en pantalla según corresponda
-
     # Verifique si la primera letra de la primera palabra
     # es mayor a la primera letra de la segunda palabra
     # Imprima en pantalla según corresponda
+
+    letra1 = texto_1[:1]
+    letra2 = texto_2[:1]
+    
+    if letra1 > letra2:
+        print('la letra {} de la palabra {} es mayor que '
+        'la letra {} de la palabra {}'.format(letra1,texto_1,letra2,texto_2))
+    elif letra2 > letra1:
+        print('la letra {} de la palabra {} es mayor que '
+        'la letra {} de la palabra {}'.format(letra2,texto_2,letra1,texto_1))
 
     copia_texto_1 = texto_1  # Copia de la variable texto_1
 
     # Verifique que copia_texto_1 es igual a texto_1
     # Imprima en pantalla según corresponda
-
+    if copia_texto_1 == texto_1:
+        print('son iguales')
+    
     # Verifique que copia_texto_1 es distinta a texto_2
     # Imprima en pantalla según corresponda
-
+    if copia_texto_1 != texto_2:
+        print('son distintas')
 
 def ej3():
     # Ejercicios de práctica numérica
@@ -116,6 +134,16 @@ def ej3():
     #      verifique si el numero_2 es mayor a 5
     #       --> En caso afirmativo imprima en pantalla "Resp=3"
     #       --> En caso negativo imprima en pantalla "Resp=4"
+    if numero_1 > 5:
+        if numero_2 > 0:
+            print('Resp=1')
+        elif numero_2 < 0:
+            print('Resp=2')
+    elif numero_1 < 5:
+        if numero_2 > 5:
+            print('Resp=3')
+        elif numero_2 < 5:
+            print('Resp=4')
 
     # Verifique la calificación de un estudiante según su
     # puntaje en un examen
@@ -129,9 +157,18 @@ def ej3():
 
     # Debe imprimir en pantalla la calificacion
     # Utilizar "if" anidados
+    if puntaje >= 90:
+        print('A')
+    elif puntaje >= 80:
+        print('B')
+    elif puntaje >= 70:
+        print('C')
+    elif puntaje >= 60:
+        print('D')
+    elif puntaje < 60:
+        print('F')
 
-
-#def ej4():
+def ej4():
     # Ejemplos variables de texto
 
     texto_1 = '5'
@@ -139,11 +176,22 @@ def ej3():
 
     # Verifique cual cual de los dos textos es mayor alfabéticamente
     # Imprima en pantalla según corresponda
+    if texto_1 > texto_2:
+        print('{} es mayor que {}'.format(texto_1,texto_2))
+    elif texto_2 > texto_1:
+        print('{} es mayor que {}'.format(texto_2,texto_1))  
 
     # Transforma esas variables tipo texto y almacénalas
     # en nuevas variables númericas (int)
     # Repita el proceso, ¿Cuál de las nuevas variables es mayor?
     # Imprima en pantalla según corresponda
+
+    valor_1 = int(texto_1)
+    valor_2 = int(texto_2)
+    if valor_1 > valor_2:
+        print('{} es mayor {}'.format(valor_1,valor_2))
+    elif valor_2 > valor_1:
+        print('{} es mayor {}'.format(valor_2,valor_1))
 
     # Para pensar!
     # ¿Por qué cree que texto_2 es mayor a texto_1?
@@ -158,5 +206,5 @@ if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
     ej2()
-    #ej3()
-    #ej4()
+    ej3()
+    ej4()
