@@ -61,8 +61,6 @@ def ej2():
     else:
         print('tercer numero es impar')
 
-    
-
 def ej3():
     print('Ejercicios de práctica con números')
 
