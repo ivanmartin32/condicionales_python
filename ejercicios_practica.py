@@ -76,6 +76,9 @@ def ej2():
 
     # Compare cual de las dos palabras es mayor (alfabéticamente)
     # Imprima en pantalla según corresponda
+    # En este ejercicio no entendi bien la consigna
+    # ya que las palabras son strings y no se a que se refiere
+    # con mayor, igual la realice, consultare en la clase
     if texto_1 > texto_2:
         print('{} es mayor'.format(texto_1))
     elif texto_2 > texto_1:

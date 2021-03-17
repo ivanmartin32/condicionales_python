@@ -23,7 +23,17 @@ def ej1():
     Calcule la diferencia entre ellos e informe por pantalla
     si el resultado es positivo, negativo o cero.
     '''
-
+    print('Ingrese primer numero')
+    numero_1 = float(input())
+    print('Ingrese segundo numero')
+    numero_2 = float(input())
+    resultado = numero_1 - numero_2
+    if resultado > 0:
+        print('El resultado es positivo')
+    elif resultado < 0:
+        print('El resultado es negativo')
+    else:
+        print('El resultado es cero')
 
 def ej2():
     print('Ejercicios de práctica con números')
@@ -34,7 +44,24 @@ def ej2():
     o impar.
     Para cada caso imprimir el resultado en pantalla.
     '''
+    numero_1 = int(input('Ingrese primer numero:\n'))
+    numero_2 = int(input('Ingrese segundo numero:\n'))
+    numero_3 = int(input('Ingrese tercer numero:\n'))
+    
+    if numero_1 % 2 == 0:
+        print('primer numero es par')
+    else:
+        print('primer numero es impar')
+    if numero_2 % 2 == 0:
+        print('segundo numero es par')
+    else:
+        print('segundo numero es impar')
+    if numero_3 % 2 == 0:
+        print('tercer numero es par')
+    else:
+        print('tercer numero es impar')
 
+    
 
 def ej3():
     print('Ejercicios de práctica con números')
@@ -87,7 +114,7 @@ def ej5():
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    #ej2()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
