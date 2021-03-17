@@ -114,12 +114,33 @@ def ej4():
     Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
     e imprimir en pantalla de la mayor a la menor
     '''
+    # Use array/listas para este caso
+
     palabras = [str(input('Ingrese primera palabra \n')),
     str(input('Ingrese segunda palabra \n')),str(input('Ingrese tercera palabra \n'))]
+    orden = int(input('Presione 1 para ordenar alfabeticamente de (A-Z) \n'
+                      'Presione 2 para ordenar alfabeticamente de (Z-A) \n'
+                      'Presione 3 para ordenar por cantidad de letras (-/+) \n'
+                      'Presione 4 para ordenar por cantidad de letras (+/-) \n'))
+    # En este caso se me ocurrio usarlo con el metodo sort no con operador >
+    # y agregar mas opciones
     
-    
-    
+    if orden == 1:
+        palabras.sort()
+        print(palabras)
+    elif orden == 2:
+        palabras.sort(reverse=True)
+        print(palabras)
+    elif orden == 3:
+        palabras.sort(key=len)
+        print(palabras)
+    elif orden == 4:
+        palabras.sort(key=len, reverse=True)
+        print(palabras)
+
+ 
 def ej5():
+    import statistics
     print('Ejercicios de práctica con números')
 
     '''
@@ -131,6 +152,21 @@ def ej5():
 
     En cada caso imprimir en pantalla el resultado
     '''
+    temperaturas = [float(input('Ingrese primera temperatura \n')),
+                    float(input('Ingrese segunda temperatura \n')),
+                    float(input('Ingrese tercera temperatura \n'))]
+        
+    datos = int(input('Presione 1 para saber cual es la maxima temperatura: \n'
+                      'Presione 2 para saber cual es la temperatura minima: \n'
+                      'Presione 3 para saber cual es el promedio de temperatura: \n'))
+    if datos == 1:
+        print('La temperatura maxima es', max(temperaturas))
+    elif datos == 2:
+        print('La temperatura minima es', min(temperaturas))
+    elif datos == 3:
+        promedio = statistics.mean(temperaturas)
+        print('El promedio de temperaturas es', promedio)
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
@@ -138,4 +174,4 @@ if __name__ == '__main__':
     ej2()
     ej3()
     ej4()
-    #ej5()
+    ej5()
