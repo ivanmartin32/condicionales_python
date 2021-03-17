@@ -99,7 +99,6 @@ def ej3():
         resultado = numero1 ** numero2
         print('{} {}(Elevado) a {} es {}'.format(numero1,operador,numero2,resultado))
 
-
 def ej4():
     print('Ejercicios de práctica con cadenas')
 
@@ -115,8 +114,11 @@ def ej4():
     Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
     e imprimir en pantalla de la mayor a la menor
     '''
-
-
+    palabras = [str(input('Ingrese primera palabra \n')),
+    str(input('Ingrese segunda palabra \n')),str(input('Ingrese tercera palabra \n'))]
+    
+    
+    
 def ej5():
     print('Ejercicios de práctica con números')
 
@@ -135,5 +137,5 @@ if __name__ == '__main__':
     ej1()
     ej2()
     ej3()
-    #ej4()
+    ej4()
     #ej5()
