@@ -140,6 +140,7 @@ def ej4():
 
  
 def ej5():
+    # Importe statistics para poder hacer el promedio del array 
     import statistics
     print('Ejercicios de práctica con números')
 
