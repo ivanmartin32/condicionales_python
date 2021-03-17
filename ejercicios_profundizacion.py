@@ -165,8 +165,7 @@ def ej5():
         print('La temperatura minima es', min(temperaturas))
     elif datos == 3:
         promedio = statistics.mean(temperaturas)
-        print('El promedio de temperaturas es', promedio)
-
+        print('El promedio de temperaturas es de', promedio)
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
