@@ -77,6 +77,27 @@ def ej3():
     Se debe efectuar el cálculo correcto según la operación ingresada por consola
     Imprimir en pantalla la operación realizada y el resultado
     '''
+    print('Ingrese primer numero')
+    numero1 = float(input())
+    print('Ingrese Operador')
+    operador = str(input())
+    print('Ingrese segundo numero')
+    numero2 = float(input())
+    if operador == '+':
+        resultado = numero1 + numero2
+        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
+    elif operador == '-':
+        resultado = numero1 - numero2
+        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
+    elif operador == '*':
+        resultado = numero1 * numero2
+        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
+    elif operador == '/':
+        resultado = numero1 / numero2
+        print('{} {} {} es {}'.format(numero1,operador,numero2,resultado))
+    elif operador == '**':
+        resultado = numero1 ** numero2
+        print('{} {}(Elevado) a {} es {}'.format(numero1,operador,numero2,resultado))
 
 
 def ej4():
@@ -113,6 +134,6 @@ if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
     ej2()
-    #ej3()
+    ej3()
     #ej4()
     #ej5()
