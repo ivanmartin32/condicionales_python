@@ -139,8 +139,7 @@ def ej4():
         print(palabras)
 
 def ej5():
-    # Importe statistics para poder hacer el promedio del array 
-    import statistics
+        
     print('Ejercicios de práctica con números')
 
     '''
@@ -152,25 +151,24 @@ def ej5():
 
     En cada caso imprimir en pantalla el resultado
     '''
-    temperaturas = [float(input('Ingrese primera temperatura \n')),
-                    float(input('Ingrese segunda temperatura \n')),
-                    float(input('Ingrese tercera temperatura \n'))]
-        
-    datos = int(input('Presione 1 para saber cual es la maxima temperatura: \n'
-                      'Presione 2 para saber cual es la temperatura minima: \n'
-                      'Presione 3 para saber cual es el promedio de temperatura: \n'))
+    temperatura_1 = float(input('Ingrese primer temperatura \n'))
+    temperatura_2 = float(input('Ingrese segunda temperatura \n'))
+    temperatura_3 = float(input('Ingrese tercer temperatura \n'))
+    datos = int(input('Ingrese 1 para saber la temperatura maxima: \n'
+                  'Ingrese 2 para saber la temperatura minima: \n'
+                  'Ingrese 3 para saber el promedio: \n'))
     if datos == 1:
-        print('La temperatura maxima es', max(temperaturas))
+        print ('La temperatura maxima es', max(temperatura_1,temperatura_2,temperatura_3))
     elif datos == 2:
-        print('La temperatura minima es', min(temperaturas))
+        print ('La temperatura minima es', min(temperatura_1,temperatura_2,temperatura_3))
     elif datos == 3:
-        promedio = statistics.mean(temperaturas)
-        print('El promedio de temperaturas es de', promedio)
-
+        print('La temperatura promedio es', (temperatura_1 + temperatura_2 + temperatura_3) / 3)
+    
+    
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
-    ej2()
-    ej3()
-    ej4()
+    #ej1()
+    #ej2()
+    #ej3()
+    #ej4()
     ej5()
