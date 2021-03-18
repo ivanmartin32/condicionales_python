@@ -138,7 +138,6 @@ def ej4():
         palabras.sort(key=len, reverse=True)
         print(palabras)
 
- 
 def ej5():
     # Importe statistics para poder hacer el promedio del array 
     import statistics
