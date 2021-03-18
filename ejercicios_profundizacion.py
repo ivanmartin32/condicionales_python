@@ -114,7 +114,7 @@ def ej4():
     Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
     e imprimir en pantalla de la mayor a la menor
     '''
-    # Use array/listas para este caso
+    # Use listas para este caso
 
     palabras = [str(input('Ingrese primera palabra \n')),
     str(input('Ingrese segunda palabra \n')),str(input('Ingrese tercera palabra \n'))]
@@ -122,8 +122,8 @@ def ej4():
                       'Presione 2 para ordenar alfabeticamente de (Z-A) \n'
                       'Presione 3 para ordenar por cantidad de letras (-/+) \n'
                       'Presione 4 para ordenar por cantidad de letras (+/-) \n'))
-    # En este caso se me ocurrio usarlo con el metodo sort no con operador >
-    # y agregar mas opciones
+    # En este caso se me ocurrio usarlo con el metodo sort y no con operador >
+    # para hacerlo mas simple y agregar mas opciones
     
     if orden == 1:
         palabras.sort()
@@ -137,6 +137,67 @@ def ej4():
     elif orden == 4:
         palabras.sort(key=len, reverse=True)
         print(palabras)
+    
+    # Tambien agrego comentado el ejercicio 4 con el operador >
+    # como otra opcion de realizado de ej4
+    
+    '''
+    cadena_1 = str(input('Ingrese primera palabra: \n'))
+    cadena_2 = str(input('Ingrese segunda palabra: \n'))
+    cadena_3 = str(input('Ingrese la tercera persona: \n'))
+
+    orden = int(input('Ingrese 1 para ordenar palabras alfabeticamente de Z-A \n'
+                  'Ingrese 2 para ordenar palabras por cantidad de letras de (+/-) \n'))
+
+    if (cadena_1 > cadena_2 and cadena_1 > cadena_3 
+        and cadena_2 > cadena_3 and orden == 1):
+        print(cadena_1,cadena_2,cadena_3)
+
+    elif (cadena_1 > cadena_2 and cadena_1 > cadena_3
+        and cadena_3 > cadena_2 and orden == 1):
+        print(cadena_1,cadena_3,cadena_2)
+
+    elif (cadena_2 > cadena_1 and cadena_2 > cadena_3 
+        and cadena_1 > cadena_3 and orden == 1):
+        print(cadena_2,cadena_1,cadena_3)
+
+    elif (cadena_2 > cadena_1 and cadena_2 > cadena_3 
+        and cadena_3 > cadena_1 and orden == 1):
+        print(cadena_2,cadena_3,cadena_1)
+
+    elif (cadena_3 > cadena_1 and cadena_3 > cadena_2 
+        and cadena_1 > cadena_2 and orden == 1):
+        print(cadena_3,cadena_1,cadena_2)
+
+    elif (cadena_3 > cadena_1 and cadena_3 > cadena_2 
+        and cadena_2 > cadena_3 and orden == 1):
+        print(cadena_3,cadena_2,cadena_1)
+
+        
+    if (len(cadena_1) > len(cadena_2) and len(cadena_1) > len(cadena_3) 
+        and len(cadena_2) > len(cadena_3) and orden == 2):
+        print(cadena_1,cadena_2,cadena_3)
+
+    elif (len(cadena_1) > len(cadena_2) and len(cadena_1) > len(cadena_3) 
+        and len(cadena_3) > len(cadena_2) and orden == 2):
+        print(cadena_1,cadena_3,cadena_2)
+
+    elif (len(cadena_2) > len(cadena_1) and len(cadena_2) > len(cadena_3) 
+        and len(cadena_1) > len(cadena_3) and orden == 2):
+        print(cadena_2,cadena_1,cadena_3)
+
+    elif (len(cadena_2) > len(cadena_1) and len(cadena_2) > len(cadena_3) 
+        and len(cadena_3) > len(cadena_1) and orden == 2):
+        print(cadena_2,cadena_3,cadena_1)
+
+    elif (len(cadena_3) > len(cadena_1) and len(cadena_3) > len(cadena_2) 
+        and len(cadena_1) > len(cadena_2) and orden == 2):
+        print(cadena_3,cadena_1,cadena_2)
+
+    elif (len(cadena_3) > len(cadena_1) and len(cadena_3) > len(cadena_2) 
+        and len(cadena_2) > len(cadena_1) and orden == 2):
+        print(cadena_3,cadena_2,cadena_1)
+    '''
 
 def ej5():
         
